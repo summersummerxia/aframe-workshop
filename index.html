@@ -22,6 +22,7 @@
 
     <!-- efor the nav mesh -->
     <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+    <script src="https://www.npmjs.com/package/aframe-event-set-component"></script>
   </head>
   <body>
     <a-scene>
@@ -35,8 +36,14 @@
         <audio id="siri3" src="audio/3.MP4.mp3"></audio>
         <audio id="siri4" src="audio/4.mp3"></audio>
         <audio id="siri5" src="audio/5.mp3"></audio>
+        <audio id="siri6" src="audio/6.mp3"></audio>
+        <audio id="siri7" src="audio/7.mp3"></audio>
+        <audio id="siri8" src="audio/8.MP4.mp3"></audio>
+        <audio id="siri10" src="audio/10.mp3"></audio>
         <video id="marks" autoplay loop="true" src="video/marks.mp4"></video>
       </a-assets>
+
+      <a-scene cursor="rayOrigin: mouse"></a-scene>
 
       <a-entity
       obj-model="obj: #phone-obj; mtl: #phone-mtl"
@@ -67,26 +74,30 @@
       obj-model="obj: #phone-obj; mtl: #phone-mtl"
       position="-3.822 0.493 -3"
       rotation="0 138.73 0"
-      scale="0.3 0.3 0.3">
+      scale="0.3 0.3 0.3"
+      sound="src: #siri6; on: click">
     </a-entity>
 
     <a-entity
       obj-model="obj: #phone-obj; mtl: #phone-mtl"
       position="-0.5 1 -1.583"
       rotation="0 138.73 0"
-      scale="0.3 0.3 0.3">
+      scale="0.3 0.3 0.3"
+      sound="src: #siri7; on: click">
     </a-entity>
 
     <a-entity
     obj-model="obj: #phone-obj; mtl: #phone-mtl"
     position="0.47161 1.71734 -1.13981"
-    rotation="0 60 0" scale="0.2 0.2 0.2">
+    rotation="0 60 0" scale="0.2 0.2 0.2"
+    sound="src: #siri8; on: click">
     </a-entity>
 
     <a-entity
     obj-model="obj: #phone-obj; mtl: #phone-mtl"
     position="-3.279 1.21147 0.90737" rotation="0 230 0"
-    scale="0.3 0.3 0.3">
+    scale="0.3 0.3 0.3"
+    sound="src: #siri10; on: click">
     </a-entity>
 
     <a-entity
