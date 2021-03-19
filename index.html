@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- particle system library -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- environment library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- text geometry library -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <!-- efor the nav mesh -->
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="phone-obj" src="models/iphone12.obj"></a-asset-item>
+        <a-asset-item id="phone-mtl" src="models/iphone12.mtl"></a-asset-item>
+        <img id="map" src="images/map.jpeg">
+        <img id="warn" src="images/mark.jpg">
+        <audio id="siri1" src="audio/1.mp3"></audio>
+        <audio id="siri2" src="audio/2.MP4.mp3"></audio>
+        <audio id="siri3" src="audio/3.MP4.mp3"></audio>
+        <audio id="siri4" src="audio/4.mp3"></audio>
+        <audio id="siri5" src="audio/5.mp3"></audio>
+        <video id="marks" autoplay loop="true" src="video/marks.mp4"></video>
+      </a-assets>
+
+      <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-0.663 1.203 -0.902"
+      rotation="0 138.73 0"
+      scale="0.1 0.1 0.1"
+      sound="src: #siri1; on: click">
+      </a-entity>
+
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="2 0.510 -4.000"
+      rotation="0 138.73 0"
+      scale="0.3 0.3 0.3"
+      sound="src: #siri2; on: click">
+    </a-entity>
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-2.041 2 -3.460"
+      rotation="0 138.73 0"
+      scale="0.3 0.3 0.3"
+      sound="src: #siri3; on: click">
+    </a-entity>
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-3.822 0.493 -3"
+      rotation="0 138.73 0"
+      scale="0.3 0.3 0.3">
+    </a-entity>
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-0.5 1 -1.583"
+      rotation="0 138.73 0"
+      scale="0.3 0.3 0.3">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="0.47161 1.71734 -1.13981"
+    rotation="0 60 0" scale="0.2 0.2 0.2">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-3.279 1.21147 0.90737" rotation="0 230 0"
+    scale="0.3 0.3 0.3">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-1.75 1.203 -0.902"
+    rotation="0 200.000 0"
+    scale="0.2 0.2 0.2">
+    </a-entity>
+
+    <a-entity
+      geometry="primitive: sphere;"
+      radius = "1;"
+      position="0 -0.77 -1.0;"
+      scale="2 2 2"
+      rotation="-17.86 -15.35 0"
+      material="src: #map"
+      sound="src: #siri5; autoplay: true">
+    </a-entity>
+
+    <a-entity
+    text-geometry="value: Hey Siri"
+    position="-1.327 2.252 -2"
+     material="color: #111"
+    align="center"
+    scale="1 1 1"
+    sound="src: #siri4; autoplay: true">
+    </a-entity>
+
+    <a-videosphere src="#marks"></a-videosphere>
+    <!--<a-sky Src="#warn"></a-sky>-->
+
+    </a-scene>
+  </body>
+</html>
